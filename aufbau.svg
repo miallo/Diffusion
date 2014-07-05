@@ -19,6 +19,58 @@
   <defs
      id="defs4">
     <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutM"
+       style="overflow:visible">
+      <path
+         id="path4486"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutL"
+       style="overflow:visible">
+      <path
+         id="path4483"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Send"
+       style="overflow:visible;">
+      <path
+         id="path4374"
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.3) rotate(180) translate(-2.3,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path4362"
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <marker
        inkscape:stockid="Arrow1Send"
        orient="auto"
        refY="0"
@@ -320,9 +372,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="166.22949"
-     inkscape:cy="67.628113"
+     inkscape:zoom="45.254834"
+     inkscape:cx="516.90093"
+     inkscape:cy="173.82488"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -339,7 +391,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -349,7 +401,7 @@
      id="layer1"
      transform="translate(0,-752.36218)">
     <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.4000001;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Send)"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.40000010000000019;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#TriangleOutM)"
        d="m 496.06066,887.60631 19.12976,-19.12976"
        id="path4583"
        inkscape:connector-curvature="0" />
@@ -379,26 +431,26 @@
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="51.866287"
+       x="67.116287"
        y="774.07135"
        id="text3839"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3841"
-         x="51.866287"
+         x="67.116287"
          y="774.07135"
          style="font-size:2px">Hg-Lampe</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="173.0648"
-       y="800.71289"
+       x="181.0648"
+       y="807.21289"
        id="text3843"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3845"
-         x="173.0648"
-         y="800.71289"
+         x="181.0648"
+         y="807.21289"
          style="font-size:2px">Linse</tspan></text>
     <rect
        style="fill:url(#linearGradient3855);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.39813858;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
@@ -756,14 +808,14 @@
     <text
        xml:space="preserve"
        style="font-size:2px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="501.11142"
-       y="883.81818"
+       x="502.27997"
+       y="881.2644"
        id="text4522"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4524"
-         x="501.11142"
-         y="883.81818">v</tspan></text>
+         x="502.27997"
+         y="881.2644">\tiny{U}</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.81128126px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 521.56321,937.45762 0,11.89284 -30.24065,0 0,-12.058 29.98652,0 0.27208,0 z"
@@ -778,16 +830,16 @@
     <text
        xml:space="preserve"
        style="font-size:2px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="263.54782"
+       x="268.54782"
        y="810.0011"
        id="text5450"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5452"
-         x="263.54782"
+         x="268.54782"
          y="810.0011">Küvette</tspan><tspan
          sodipodi:role="line"
-         x="263.54782"
+         x="268.54782"
          y="812.5011"
          id="tspan5473" /></text>
     <path
@@ -834,5 +886,15 @@
          id="tspan5527"
          x="497.67288"
          y="985.0011">\tiny{10 V}</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="259"
+       y="20.5"
+       id="text3393"
+       sodipodi:linespacing="125%"
+       transform="translate(0,752.36218)"><tspan
+         sodipodi:role="line"
+         id="tspan3395"></tspan></text>
   </g>
 </svg>

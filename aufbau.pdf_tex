@@ -55,7 +55,7 @@
     \put(0.58098807,0.06210564){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Mikrometerschraube}}}%
     \put(0.56988078,0.15887737){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\Delta$ x}}}%
     \put(0.76112051,0.42216732){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Photowiederstand}}}%
-    \put(0.92644897,0.31218439){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{v}}}%
+    \put(0.92578698,0.31478836){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{U}}}}%
     \put(0.45896457,0.45711926){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Küvette
 }}}%
     \put(0.91658546,0.10759985){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{10 V}}}}%
