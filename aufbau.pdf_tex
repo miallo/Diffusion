@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{595.27558594bp}%
+    \setlength{\unitlength}{400.55bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,16 +48,16 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.4142857)%
+  \begin{picture}(1,0.5317921)%
     \put(0,0){\includegraphics[width=\unitlength]{aufbau.pdf}}%
-    \put(0.10676527,1.04110401){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Hg-Lampe}}}%
-    \put(0.26964582,1.00530007){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Linse}}}%
-    \put(0.48007431,0.72702011){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Mikrometerschraube}}}%
-    \put(0.47260042,0.79213598){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\Delta$ x}}}%
-    \put(0.60128212,0.96929895){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Photowiederstand}}}%
-    \put(0.71051264,0.89361356){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{v}}}%
-    \put(0.39124736,0.99281747){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Küvette
+    \put(0.05665467,0.52888009){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Hg-Lampe}}}%
+    \put(0.28423878,0.46268802){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Linse}}}%
+    \put(0.58098807,0.06210564){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Mikrometerschraube}}}%
+    \put(0.56988078,0.15887737){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\Delta$ x}}}%
+    \put(0.76112051,0.42216732){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Photowiederstand}}}%
+    \put(0.92644897,0.31218439){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{v}}}%
+    \put(0.45896457,0.45711926){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Küvette
 }}}%
-    \put(0.70589154,0.75763228){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{10 V}}}}%
+    \put(0.91658546,0.10759985){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny{10 V}}}}%
   \end{picture}%
 \endgroup%
