@@ -102,6 +102,8 @@
    \resetfontdimens}}
 \makeatother
 
+%Honecker-Kasten mit $$\shadowbox{$xxxx$}$$
+\usepackage{fancybox}
 
 \begin{document}
 
@@ -182,26 +184,28 @@ Da die Teilchenzahl erhalten bleibt, müssen mehr Teilchen ein- bzw. ausströmen
 
 
 \subsection{Lösung der DGL}
-Die Lösung der Differentialgleichung wird durch die Methode der Reflektion und Superposition bestimmt (Literatur: \cite[S. 11]{crank}).
-Unsere gesuchte Lösung ist die für einen Zylinder, welcher für $x>0$ zu $t=0$ eine Konzentration $c=c_0$ besitzt und zur selben Zeit bei $x<0$ keine Konzentration besitzt. Wir beginnen mit der Suche nach einer Lösung für eine Stoffmenge $M$, welche sich zur Zeit $t=0$ nur am Ort $x=0$ befindet.\\
+Die Lösung der sich aus diesen beiden Gleichungen ergebdenden Differentialgleichung wird durch die Methode der Reflektion und Superposition bestimmt (Literatur: \cite[S. 11]{crank}).
+Unsere gesuchte Lösung ist die für einen Zylinder, welcher für $x>0$ zu $t=0$ eine Konzentration $c=c_0$ besitzt und zur selben Zeit bei $x<0$ keine Konzentration besitzt.
+Die Grenzschicht ist also bei $x=0$.
+Wir beginnen mit der Suche nach einer Lösung für eine Stoffmenge $M$, welche sich zur Zeit $t=0$ nur am Ort $x=0$ befindet.\\
 Aus der Gleichung
 \begin{align*}
 \frac{\partial c}{\partial t}&=D\nabla^2 c\\
 \end{align*}
 folgt ersichtlicherweise die Lösung
 \begin{align}
-c'&=\frac{A}{\sqrt{t}}\exp\left(-x^2/4Dt \right)\label{eq:c}
+c'&=\frac{A}{\sqrt{t}}\exp\left(-x^2/4Dt \right)\label{eq:c1}
 \end{align}
 mit einer Konstante A, welche an die Anfangsbedingungen angepasst wird.
 Die Gesammtmenge an diffundierendem Stoff beträgt
 \begin{align*}
 M=\int\limits_{-\infty}^\infty c' \; dx
 \end{align*}
-Was durch Einsetzen von Gleichung \eqref{eq:c} und Substitution zu dem Ergebnis
+Was durch Einsetzen von Gleichung \eqref{eq:c1} und Substitution zu dem Ergebnis
 \begin{align*}
-M=2A\sqrt{\pi D}
+M=2A\sqrt{\pi D}\text{m}^2/\text{s}
 \end{align*}
-führt, was umgestellt nach $A$ und in Gleichung \eqref{eq:c} eingesetzt heißt
+führt, was umgestellt nach $A$ und in Gleichung \eqref{eq:c1} eingesetzt heißt
 \begin{align*}
 c'=\frac{M}{2\sqrt{\pi D}}\exp\left(-x^2/4Dt\right)\quad .
 \end{align*}
@@ -209,16 +213,12 @@ Diese spezielle Lösung kann nun verwendet werden, um unsere gesuchte herzuleite
 Da hierbei die Hälfte des Stoffes in die positive und die andere Hälfte in die negative $x$-Richtung diffundierte, kommt zu unserer Lösung ein Faktor 2 hinzu ("Reflektion").\\
 Durch Superposition dieser Lösung für alle $x>0$ kommt man letztlich zu dem Ergebnis, dass
 \begin{align}
-c(x,t)=\frac{c_0}{2}\left[1-\erf{\frac{x}{\sqrt{4Dt}}}\right]
+c(x,t)=\frac{c_0}{2}\left[1-\erf{\frac{x}{\sqrt{4Dt}}}\right] \label{eq:c}
 \end{align}
 mit der Gaußschen Fehlerfunktion
 \begin{align*}
 \erf{y}=\frac{2}{\sqrt{\pi}}\int\limits_0^y\exp\left(-v^2\right)~dv
 \end{align*}
-
-
-
-
 
 \subsection{Wheatstonsche Brückenschaltung und Photowiederstand}
 Die Wheatstonsche Brückenschaltung ist ein Bauelement, welches zur Bestimmung von Widerständen genutzt wird.
@@ -232,27 +232,26 @@ Der hier vermessene Widerstand ist ein Photowiederstand.
 Dieser besteht aus einem Halbleitermaterial, welches ohne Licht nur wenige freie Elektronen besitzt.
 Der von Albert Einstein entdeckte Photoelektrische Effekt kann jedoch Elektronen aus den Atomen lösen, welche dann zu einem besseren Stromfluss beitragen.
 Dadurch hat er einen von der einfallenden Strahlung abhängigen Widerstand, welcher sinkt, je mehr Licht einfällt.
-Durch messen eben dieses kann man also direkte Rückschlüsse auf die Intensität des Lichtes ziehen.
-In unserem Fall (da unsere Lichtquelle konstant geleuchtet hat) also darauf, wie viel Licht von dem Methylenblau absorbiert wurde und dadurch, wie hoch dessen Konzentration an dem Ort der Küvette war, welche durchleuchtet wurde.
+Durch messen eben dieses kann man also direkte Rückschlüsse auf die Intensität des Lichtes ziehen.\\
+In unserem Fall (da unsere Lichtquelle konstant geleuchtet hat) also darauf, wie viel Licht von dem Methylenblau absorbiert wurde und dadurch, wie hoch dessen Konzentration an dem Ort der Küvette war, welche durchleuchtet wurde.\\
 
-
-
-\section{Durchführung}
-\label{sec:durchfuehrung}
-\subsection{Aufbau}
-\begin{figure}
+\begin{figure}[!b]
  \centering
  \def\svgwidth{0.8\columnwidth}
  \input{aufbau.pdf_tex}
  \caption{Versuchsaufbau\label{fig:aufbau}}
 \end{figure}
+
+\section{Durchführung}
+\label{sec:durchfuehrung}
+\subsection{Aufbau}
 Der Aufbau ist in Abb. \ref{fig:aufbau} dargestellt.
 Das wichtigste Element hierbei ist eine Glasküvette, welche von einer Quecksilberdampflampe beleuchtet wird.
 Das Licht der Lampe wird vorher von einer Blende und einer Linse gebündelt auf die Küvette mitsammt der darin enthaltenen Flüssigkeit gelenkt.
 Nachdem es sie durchquert hat, nimmt eine Fotodiode das verbleibende Licht auf.
-Der sich dadurch verändernde Wiederstand der Diode wird nun mithilfe der Wheatstonschen Brückenschaltung vermessen.\\
-
-\subsection{Messung 1}
+Der sich dadurch verändernde Wiederstand der Diode wird nun mithilfe der Wheatstonschen Brückenschaltung vermessen.
+\subsection{Konzentrationsverlauf}
+\subsubsection*{Messung 1}
 \label{sec:messung1}
 Für Messung 1 wird der verstellbare Wiederstand solange angepasst, bis das Voltmeter keine Spannung mehr anzeigt, wenn der Graufilter $c_0/16$ eingelegt ist.
 Dann wird die Messküvette zu 3/4 mit Wasser gefüllt und darüber Methylenblau der Konzentration $c_0$ geschichtet.
@@ -261,33 +260,57 @@ Dieser Ort wird nun notiert und eine Stoppuhr gestartet.
 Im Abstand von 30s wird nun immer wieder die jeweilige Höhe bestimmt, zu der die Konzentration der Flüssigkeit gerade $c_0/16$ beträgt.
 Diese Werte werden notiert, bis die Werte von 30min aufgenommen sind.
 Nach Beendigung der Messung wird die Stoppuhr weiterlaufen gelassen, sowie die Küvette vorsichtig entfernt und in einem Ständer für die spätere Weiterverwendung gelagert.
-
-\subsection{Messung 2}
+\subsubsection*{Messung 2}
 Messung 2 erfolgt analog zu Messung 1, nur mit einer Konzentration von $c_0/32$.
 Dabei wird eine neue Küvette, sowie eine neue Stoppuhr benutzt.
 Auch hier wird die Stoppuhr nach Beendigung der Messung weiter laufen gelassen.
-
-\subsection{Messung 3}
+\subsection{Konzentrationsprofil}
+\subsubsection*{Messung 3}
 Nach Beendigung von Messung 2 (ungefähr 40min nach Beginn) wird von der zweiten Küvette das Konzentrationsprofil ermittelt.
 Dafür steckt man in den zweiten Ständer des Stativs nacheinander Graufilter verschiedener Intensität ($c_0/2, c_0/4, c_0/8, c_0/16, c_0/32$) und eicht jeweils die Wheatstonsche Brücke auf deren Helligkeit.
 Dann fährt man das Stativ vorsichtig zur Küvette und bestimmt die entsprechende Höhe, in der die Konzentration gleich ist.
 Dazu notiert man ebenfalls die Zeit nach Beginn von Messung 2, zu der dies abgelesen wird.
 Dies tut man jeweils für auf- und absteigende Konzentrationen, bis man 10 Messwerte aufgenommen hat.
-
-\subsection{Messung 4}
+\subsubsection*{Messung 4}
 Messung 4 ist analog zu Messung 3, nur mit Küvette 1.
 Sie erfolgt ca. 100min nach Beginn von Messung 1.
 
 
 \section{Auswertung}
 \label{sec:auswertung}
-\begin{figure}
+Um die Diffusionskonstante von Messung 1 zu Bestimmen ist nach der Formel \eqref{eq:c} mit $c=\frac{c_0}{16}$
+\begin{align*}
+ \frac{1}{16}&=\frac{1}{2}\left(1-\erf{\frac{x}{\sqrt{4Dt}}}\right)\\
+ \Rightarrow~ \frac{7}{8}&=\erf{\frac{x}{\sqrt{4Dt}}}
+\end{align*}Woraus sich unter Zuhilfenahme von WolframAlpha\textsuperscript{\textregistered} mit der Umkehrfunktion ergibt
+\begin{align*}
+ 1.0848&\approx \frac{x}{\sqrt{4Dt}}\notag\\
+ \Rightarrow~ x^2&=1.0848^2 \cdot 4Dt\notag\\
+ x^2&=4.7071\cdot Dt\notag
+\end{align*}
+Die Steigung, welche in Abb. \ref{fig:M12} zu erkennen ist, ist $m_1=\frac{x^2}{t}$, da der Ort quadratisch gegen die Zeit aufgetragen ist.
+\begin{align}
+D&=\frac{m_1}{4.7071}\label{eq:Dc16}
+\end{align}
+Analog ergibt sich für Messung 2 mit $c=\frac{c_0}{32}$
+\begin{align}
+ \frac{15}{16}&=\erf{\frac{x}{\sqrt{4Dt}}}\notag\\
+ \Rightarrow~ D&=\frac{m_2}{6.9395}\label{eq:Dc32}
+\end{align}
+Die Steigung der gefitteten Geraden von Messung 1 aus Abb. \ref{fig:M12} beträgt $(1.34\pm 0.03)\cdot 10^{-9}$m$^2$/s und die von Messung 2 $(2.81\pm 0.07)\cdot 10^{-9}$m$^2$/s.
+Daraus ergibt sich nach \eqref{eq:Dc16} und \eqref{eq:Dc32}
+\begin{align*}
+ D_1&= (2.8\pm 0.1)\cdot 10^{-10}\text{m}^2/\text{s}\\
+ D_2&= (4.0\pm 0.2)\cdot 10^{-10}\text{m}^2/\text{s}\\
+\end{align*}
+Aus dem gewichteten Mittelwert von $D_1$ und $D_2$ ergibt sich 
+$$\shadowbox{$D=(3.0\pm 0.1)\cdot 10^{-10}\text{m}^2/\text{s}$}$$
+ Dies stimmt nicht ganz mit dem im Praktikumshandbuch vorgeschlagenen Wert von $D=4.0\cdot 10^{-10}\text{m}^2/\text{s}$ überein.
+\begin{figure}[!h]
 \centering
 \input{v1ges.tex}
 \caption{Messung 1 und 2: Auftragung der Höhe der Konzentration $c_0/16$ und $c_0/32$ im Quadrat gegen die Zeit mit dem zugehörigen Fit\label{fig:M12}}
 \end{figure}
-Die Steigung der gefitteten Geraden von Messung 1 aus Abb. \ref{fig:M12} beträgt $(1.34\pm 0.03)\cdot 10^{-9}$m$^2$/s und die von Messung 2 $(2.81\pm 0.07)\cdot 10^{-9}$m$^2$/s
-
 
 
 
