@@ -110,7 +110,12 @@
 %SI-Package
 \usepackage{siunitx}
 
+
 \parindent0pt
+
+%Bibliography \bibliography{literatur} und \cite{gerthsen}
+\usepackage{cite}
+
 
 \begin{document}
 
@@ -166,7 +171,6 @@ Die Diffusion (vom lateinischen diffundere 'sich ausbreiten') ist die Eigenschaf
 So verursacht jede räumliche Inhomogenität einer physikalischen Größe einen Ausgleichsstrom.
 Bei Materie geschieht dies aufgrund der statistischen Bewegung der Teilchen, der Braunschen Molekularbewegung.
 Die Diffusion ist eine sehr wichtige Eigenschaft von Teilchen, da ohne sie zum Beispiel kein Leben existieren könnte, da kein Sauerstoff in unsere Zellen transportiert werden könnte.
-
 
 
 \section{Theorie}
@@ -348,29 +352,7 @@ Trägt man die Messwerte von Messung 1 in einem Diagramm auf, so ist offensicht 
 Dieser ist durch einen Stoß an den Tisch zu erklären, welcher die Vermischung der Flüssigkeiten in dem Moment extrem beschleunigt hat.
 
 
-
 \section{Anhang}
-\begin{thebibliography}{1000}
-
-\bibitem{lp} 
-	\emph{Lehrportal der Universität Göttingen, Diffusion},
-  http://lp.uni-goettingen.de/get/text/3665, abgerufen 6.7.2014, 14:30 Uhr
-
-\bibitem{gerthsen}
-	\textsc{Dieter Meschede} (2010): \emph{Gerthsen Physik}, 24. Auflage, Springer Heidelberg,
-Dordrecht, London, New York
-
-\bibitem{demtroeder}
-	\textsc{Wolfgang Demtröder} (2008): \emph{Experimentalphysik 1 - Mechanik und Wärme}, 5. Auflage, Springer Berlin, Heidelberg
-
-%\bibitem{Formelsammlung}
-%	\textsc{Wolfgang Pfeil et. al.} (2009): \emph{Das große Tafelwerk (interaktiv)}, 1. Auflage, Cornelsen Berlin
-
-\bibitem{giancoli}
-	\textsc{Douglas C. Giancoli} (2010): \emph{Physik - Lehr- und Übungsbuch}, 3. Auflage, Pearson Studium London
-
-\bibitem{crank}
-	\textsc{J. Crank} (1975): \emph{Mathematics of Diffusion}, 1. Auflage, Clarendon Press Oxford
-	
-\end{thebibliography}
+\bibliography{literatur}
+\bibliographystyle{alpha}
 \end{document}
