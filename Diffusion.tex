@@ -114,7 +114,9 @@
 \parindent0pt
 
 %Bibliography \bibliography{literatur} und \cite{gerthsen}
-\usepackage{cite}
+%\usepackage{cite}
+\usepackage{babelbib}
+\selectbiblanguage{ngerman}
 
 
 \begin{document}
@@ -287,18 +289,27 @@ Sie erfolgt ca. 100min nach Beginn von Messung 1.
 \section{Auswertung}
 \label{sec:auswertung}
 \subsection{Theoretische Erwartungswerte}
-In der Theorie sollte für ein
+In Abb. \ref{fig:diffkurvetheo} kann man die Erwartungswerte sehen.
+Hier ist zu $t=0s$ eine eindeutige Grenzschicht bei $x=0$mm zu erkennen.
+Mit fortschreitender Zeit vermischen sich die Flüssigkeiten miteinander.
+Zuerst gibt es keinen Ort mehr, an dem die Konzentrationen $c_0$ oder $0$ noch vorhanden sind.
+Dieser Prozess geschieht so lange, bis (in der Theorie nach unendlich langer Zeit) eine vollkommene Gleichverteilung erfolgt ist.
+In der Abb. \ref{fig:diffkurvetheo} ist zudem zu erkennen, dass bei einer Diffusionskonstante von $4\cdot 10^{-10}$m$^2$/s auch nach zwei Tagen immernoch ein deutlicher Gradient zu erkennen ist.\\\\
+In den ersten beiden Messungen verfolgt man im Zeitverlauf die Position einer bestimmten Konzentration, was in der Abbildung den unterschiedlichen Schnittpunkten einer Gerade, welche parallel zur x-Achse verläuft entspricht.\\
+In der dritten und vierten Messung soll versucht werden, in einem möglichst kleinen Zeitraum möglichst viele verschiedene Werte von unterschiedlichen Konzentrationen zu erfassen.
+Dies würde in Abb. \ref{fig:diffkurvetheo} den unterschiedlichen Konzentrationen an unterschiedlichen Orten auf einer Kurve entsprechen.
+
 \begin{figure}[!h]
  \centering
  \input{errorfkt.tex}
-\caption{Theoretische Erwartungswerte der Diffusionskurven für verschiedene Zeiten mit einem Diffusionskoeffizienten von $D=4\cdot 10^{-10}$m$^2$/s}
+\caption{Theoretische Erwartungswerte der Diffusionskurven für verschiedene Zeiten mit einem Diffusionskoeffizienten von $D=4\cdot 10^{-10}$m$^2$/s\label{fig:diffkurvetheo}}
 \end{figure}
 \subsection{Messung 1 und 2}
 Um die Diffusionskonstante von Messung 1 zu Bestimmen ist nach der Formel \eqref{eq:c} mit $c=\frac{c_0}{16}$
 \begin{align*}
  \frac{1}{16}&=\frac{1}{2}\left(1-\erf{\frac{x}{\sqrt{4Dt}}}\right)\\
  \Rightarrow~ \frac{7}{8}&=\erf{\frac{x}{\sqrt{4Dt}}}
-\end{align*}Woraus sich unter Zuhilfenahme von WolframAlpha\textsuperscript{\textregistered} mit der Umkehrfunktion ergibt
+\end{align*}Woraus sich unter Zuhilfenahme von WolframAlpha\textsuperscript{\textregistered}\footnote{www.wolframalpha.com} mit der Umkehrfunktion ergibt
 \begin{align*}
  1.0848&\approx \frac{x}{\sqrt{4Dt}}\notag\\
  \Rightarrow~ x^2&=1.0848^2 \cdot 4Dt\notag\\
@@ -327,7 +338,7 @@ Daraus ergibt sich nach \eqref{eq:Dc16} und \eqref{eq:Dc32}
 \end{align*}
 Aus dem gewichteten Mittelwert von $D_1$ und $D_2$ ergibt sich 
 $$\shadowbox{$D=(3.0\pm 0.1)\cdot 10^{-10}\text{m}^2/\text{s}$}$$
- Dies ist 25\% kleiner, als der im Praktikumshandbuch vorgeschlagenen Wert von $D=4.0\cdot 10^{-10}\text{m}^2/\text{s}$.
+
 \begin{figure}[!h]
 \centering
 \input{v1ges.tex}
@@ -343,16 +354,38 @@ $$\shadowbox{$D=(3.0\pm 0.1)\cdot 10^{-10}\text{m}^2/\text{s}$}$$
 \begin{figure}[h!]
  \centering
  \include{profiel2}
- \caption{Messung von Versuch 4 zusammen mit dem theoretischen Wert für die durchschnittliche Zeit der Messung}
+ \caption{Messung von Versuch 4 zusammen mit dem theoretischen Wert für die durchschnittliche Zeit der Messung\label{fig:m4}}
 \end{figure}
-
+Bei den
 \section{Diskussion}
 \label{sec:diskussion}
+\subsection{Messung 1 und 2}
+Die mithilfe des gewichteten Mittelwertes bestimmte Diffusionskonstante beträgt $=(3.0\pm 0.1)\cdot 10^{-10}\text{m}^2/\text{s}$.
+Dies ist 25\% kleiner, als der im Praktikumshandbuch oder im \cite{LP} vorgeschlagene Wert von $D_{Handbuch}=4\cdot 10^{-10}\text{m}^2/\text{s}$.
+Der Wert $D_1$ entspricht hierbei genau diesem Wert.
+Die Steigung des Fits der ersten Messung war zu gering.
+Hier könnte ein verschmutzter Graufilter die Ursache gewesen sein, welcher uns für die Auswertung eine niedrigere, als die eigentlich gemessene Konzentration, zu haben schien.
+Eine weitere Fehlerquelle ist die Lampe, welche die Küvette zusammen mit den darin enthaltenen Flüssigkeiten mit der Zeit erhitzt.
+Dies schien besonders bei der zweiten Messung einen Einfluss gehabt zu haben, da der Plot offenbart, dass die Steigung im Verlaufe der Zeit steigt.\\
+Ein weiterer möglicher Fehler war, dass wir zur Umrechnung von $x$ aus unseren gemessenen Werten davon ausgegangen sind, dass wir sofort nach der Überschichtung mit der Messung begonnen haben.
+Die ist in der Realität jedoch nicht umsetzbar, zumal es während des Befüllens schon zu einer Vermischung der beiden Flüssigkeiten kommt.\\
+
 Trägt man die Messwerte von Messung 1 in einem Diagramm auf, so ist offensicht zwischen 14min und 14.5min ein Sprung in den Werten.
 Dieser ist durch einen Stoß an den Tisch zu erklären, welcher die Vermischung der Flüssigkeiten in dem Moment extrem beschleunigt hat.
 
+\subsection{Messung 3 und 4}
+Bei der Betrachtung der Graphen fällt auf, dass (vor allem bei Messung 4 in Abb. \ref{fig:m4}) die einzelnen Gruppen bestimmter Konzentrationen zwar relativ eng beieinander, jedoch selten auf beiden Seiten der theoretischen Werte für die durchschnittliche Zeit liegen.
+Dies deutet auf unsaubere Filter (insbesondere $c_0/2$ und $c_0/4$, welche in beiden Messungen rechts der Theorie liegen) hin, welche ihre jeweiligen Messungen verfälscht haben.
+
+\subsection{Allgemeine Verbesserungsvorschläge}
+Man sollte die Filter vor jeder Nutzung auf Schmutzreste überprüfen.
+Insbesondere sollte man sie nur am Rand anfassen, damit keine Fettreste zurückbleiben.\\
+Auch könnte man die Entfernung der Lampe von der Küvette etwas erhöhen, was die Erwärmung der Flüssigkeiten verzögern würde.
+Allerdings würde so auch das vom Photosensor empfangene Licht geringer werden, was wiederum Fehler hervorrufen könnte.
+Desweiteren ist darauf zu achten, das Licht im Raum möglichst stark zu dimmen, da uns auffiel, dass das Öffnen der Tür und damit ein Lichteinfall unser Voltmeter hat ausschlagen lassen.
 
 \section{Anhang}
 \bibliography{literatur}
-\bibliographystyle{alpha}
+\bibliographystyle{babalpha}
+%\bibliographystyle{alpha}
 \end{document}
