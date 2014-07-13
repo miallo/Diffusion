@@ -15,14 +15,14 @@ f4(x)=0.5*(1-erf(x/(4*D*t4)**0.5))
 
 D=4e-4
 t1=60*30
-t2=60*90
+t2=60*60*2
 t3=60*60*6
 t4=60*60*24*2
 
 
-p f0(x) lt -1 lw 3 title '$t=0$',\
+p f0(x) lt -1 lw 3 title '$t=0$s',\
 f1(x) lw 3 t '$t=30~\si{\minute}$',\
-f2(x) lw 3 t '$t=90~\si{\minute}$',\
+f2(x) lw 3 t '$t=120~\si{\minute}$',\
 f3(x) lw 3 t '$t=6~\si{\hour}$',\
 f4(x) lw 3 t '$t=2~\si{\day}$'
 

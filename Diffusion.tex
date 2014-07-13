@@ -104,9 +104,13 @@
 
 %Honecker-Kasten mit $$\shadowbox{$xxxx$}$$
 \usepackage{fancybox}
+%Honeckerbox mit Mathe \begin{emphaeq}[box=\shadowbox*]{align}...\end{emphaeq}
+%\usepackage{emphaeq}
 
 %SI-Package
 \usepackage{siunitx}
+
+\parindent0pt
 
 \begin{document}
 
@@ -131,9 +135,9 @@ Praktikant: &  Michael Lohmann\\
 % &  Felix Kurtz\\
 Mitpraktikant: &  Kevin Lüdemann\\
 % &  Skrollan Detzler\\
- E-Mail: & m.lohmann@stud.uni-goettingen.de\\
+E-Mail: & m.lohmann@stud.uni-goettingen.de\\
 % &  felix.kurtz@stud.uni-goettingen.de\\
-Mitpraktikant:  &  kevin.luedemann@stud.uni-goettingen.de\\
+%Mitpraktikant:  &  kevin.luedemann@stud.uni-goettingen.de\\
 % &  skrollan.detzler@stud.uni-goettingen.de\\
  Betreuer: & Martin Ochmann\\
  Versuchsdatum: & 30.06.2014\\
@@ -158,7 +162,7 @@ Mitpraktikant:  &  kevin.luedemann@stud.uni-goettingen.de\\
 
 \section{Einleitung}
 \label{sec:einleitung}
-Die Diffusion (vom lateinischen diffundere 'sich ausbreiten') ist die Eigenschaft von verschiedenen Medien, sich ohne äußere Einflüsse miteinander zu vermischen bis ein Gleichgewichtszustand erreicht ist, nur dadurch, dass sie miteinander in Kontakt stehen.
+Die Diffusion (vom lateinischen diffundere 'sich ausbreiten') ist die Eigenschaft von verschiedenen Medien, sich ohne äußere Einflüsse miteinander zu vermischen, bis ein Gleichgewichtszustand erreicht ist, nur dadurch, dass sie miteinander in Kontakt stehen.
 So verursacht jede räumliche Inhomogenität einer physikalischen Größe einen Ausgleichsstrom.
 Bei Materie geschieht dies aufgrund der statistischen Bewegung der Teilchen, der Braunschen Molekularbewegung.
 Die Diffusion ist eine sehr wichtige Eigenschaft von Teilchen, da ohne sie zum Beispiel kein Leben existieren könnte, da kein Sauerstoff in unsere Zellen transportiert werden könnte.
@@ -174,18 +178,14 @@ Die so entstehenden zufälligen Bewegungen wurden schon 1827 von Brown entdeckt 
 
 \subsection{Ficksche Gesetze}
 Die Fickschen Gesetze beschreiben die Diffusion.
-Da eine Inhomogenität einer physikalischen Größe $n(\vec x)$ einen Ausgleichsstrom $\vec j(\vec x)$ hervorruft, der natürlich abhängig davon ist, wie groß diese an einem bestimmten Ort $\vec x$ ist, lautet das erste Ficksche Gesetz:
-\begin{align}
-\vec j(\vec x)=-D ~ \nabla n
-\end{align}
+Da eine Inhomogenität einer physikalischen Größe $n(\vec x,t)$ (in unserem Fall Teilchen) einen Ausgleichsstrom $\vec j(\vec x,t)$ hervorruft, der abhängig davon ist, wie groß diese an einem bestimmten Ort $\vec x$ zu einer bestimmten Zeit $t$ ist, lautet das \emph{erste Ficksche Gesetz}:
+$$\shadowbox{$\vec j(\vec x,t)=-D ~ \nabla n(\vec x,t)$}$$
 Hierbei ist D die Diffusionskonstante, welche festlegt, wie groß der Teilchenstrom bei gegebener Inhomogenität eines speziellen Mediums ist.
 Da die Teilchenzahl erhalten bleibt, müssen mehr Teilchen ein- bzw. ausströmen, wenn sie sich verändert.
-\begin{align}
- \frac{\partial n}{\partial t}=-\nabla\cdot \vec j(\vec x)
-\end{align}
-
-
-
+$$\frac{\partial n(\vec x,t)}{\partial t}=-\nabla\cdot \vec j(\vec x,t)$$
+Setzt man die obige Gleichung nun für $\vec j$ ein, so ergibt sich das \emph{zweite Ficksche Gesetz}
+$$\shadowbox{$\frac{\partial n(\vec x,t)}{\partial t}=D~\nabla^2n(\vec x,t)$}$$
+Statt mit der Teilchenzahl $n$ zu rechnen, kann man ebenfalls mit der Teilchenkonzentration $c=\dfrac{n}{V}$ rechnen
 \subsection{Lösung der DGL}
 Die Lösung der sich aus diesen beiden Gleichungen ergebdenden Differentialgleichung wird durch die Methode der Reflektion und Superposition bestimmt (Literatur: \cite[S. 11]{crank}).
 Unsere gesuchte Lösung ist die für einen Zylinder, welcher für $x>0$ zu $t=0$ eine Konzentration $c=c_0$ besitzt und zur selben Zeit bei $x<0$ keine Konzentration besitzt.
@@ -236,8 +236,7 @@ Dieser besteht aus einem Halbleitermaterial, welches ohne Licht nur wenige freie
 Der von Albert Einstein entdeckte Photoelektrische Effekt kann jedoch Elektronen aus den Atomen lösen, welche dann zu einem besseren Stromfluss beitragen.
 Dadurch hat er einen von der einfallenden Strahlung abhängigen Widerstand, welcher sinkt, je mehr Licht einfällt.
 Durch messen eben dieses kann man also direkte Rückschlüsse auf die Intensität des Lichtes ziehen.\\
-In unserem Fall (da unsere Lichtquelle konstant geleuchtet hat) also darauf, wie viel Licht von dem Methylenblau absorbiert wurde und dadurch, wie hoch dessen Konzentration an dem Ort der Küvette war, welche durchleuchtet wurde.\\
-
+In unserem Fall (da unsere Lichtquelle konstant geleuchtet hat) also darauf, wie viel Licht von dem Methylenblau absorbiert wurde und dadurch, wie hoch dessen Konzentration an dem Ort der Küvette war, welche durchleuchtet wurde.
 \begin{figure}[!b]
  \centering
  \def\svgwidth{0.8\columnwidth}
@@ -253,6 +252,7 @@ Das wichtigste Element hierbei ist eine Glasküvette, welche von einer Quecksilb
 Das Licht der Lampe wird vorher von einer Blende und einer Linse gebündelt auf die Küvette mitsammt der darin enthaltenen Flüssigkeit gelenkt.
 Nachdem es sie durchquert hat, nimmt eine Fotodiode das verbleibende Licht auf.
 Der sich dadurch verändernde Wiederstand der Diode wird nun mithilfe der Wheatstonschen Brückenschaltung vermessen.
+
 \subsection{Konzentrationsverlauf}
 \subsubsection*{Messung 1}
 \label{sec:messung1}
@@ -267,6 +267,7 @@ Nach Beendigung der Messung wird die Stoppuhr weiterlaufen gelassen, sowie die K
 Messung 2 erfolgt analog zu Messung 1, nur mit einer Konzentration von $c_0/32$.
 Dabei wird eine neue Küvette, sowie eine neue Stoppuhr benutzt.
 Auch hier wird die Stoppuhr nach Beendigung der Messung weiter laufen gelassen.
+
 \subsection{Konzentrationsprofil}
 \subsubsection*{Messung 3}
 Nach Beendigung von Messung 2 (ungefähr 40min nach Beginn) wird von der zweiten Küvette das Konzentrationsprofil ermittelt.
@@ -281,13 +282,14 @@ Sie erfolgt ca. 100min nach Beginn von Messung 1.
 
 \section{Auswertung}
 \label{sec:auswertung}
-\subsection{Messung 1 und 2}
+\subsection{Theoretische Erwartungswerte}
+In der Theorie sollte für ein
 \begin{figure}[!h]
  \centering
  \input{errorfkt.tex}
-\caption{Theoretische Werte der Diffusionskurven für verschiedene Zeiten}
+\caption{Theoretische Erwartungswerte der Diffusionskurven für verschiedene Zeiten mit einem Diffusionskoeffizienten von $D=4\cdot 10^{-10}$m$^2$/s}
 \end{figure}
-
+\subsection{Messung 1 und 2}
 Um die Diffusionskonstante von Messung 1 zu Bestimmen ist nach der Formel \eqref{eq:c} mit $c=\frac{c_0}{16}$
 \begin{align*}
  \frac{1}{16}&=\frac{1}{2}\left(1-\erf{\frac{x}{\sqrt{4Dt}}}\right)\\
@@ -308,6 +310,11 @@ Analog ergibt sich für Messung 2 mit $c=\frac{c_0}{32}$
  \Rightarrow~ D_2&=\frac{m_2}{6.9395}\label{eq:Dc32}
 \end{align}
 Um das $x$ zu berechnen, muss man den Anfangsort $x'(t$=$0)$ von allen gemessenen Werten $x'(t)$ abziehen, damit die Grenzschicht tatsächlich bei $x=0$ liegt.\\  
+Die Fehler der beiden Diffusionskonstanten werden mit der Gaußschen Fehlerfortpflanzung bestimmt:
+\begin{align*}
+ \sigma_{D_1}= \sigma_{m_1}\frac{1}{4.7071}\\
+ \sigma_{D_2}= \sigma_{m_2}\frac{1}{4.7071}
+\end{align*}
 Die Steigung der gefitteten Geraden von Messung 1 aus Abb. \ref{fig:M12} beträgt $(1.34\pm 0.03)\cdot 10^{-9}$m$^2$/s und die von Messung 2 $(2.81\pm 0.07)\cdot 10^{-9}$m$^2$/s.
 Daraus ergibt sich nach \eqref{eq:Dc16} und \eqref{eq:Dc32}
 \begin{align*}
@@ -324,8 +331,6 @@ $$\shadowbox{$D=(3.0\pm 0.1)\cdot 10^{-10}\text{m}^2/\text{s}$}$$
 \end{figure}
 
 \subsection{Messung 3 und 4}
-
-
 \begin{figure}[h!]
  \centering
  \include{profiel1}
@@ -368,7 +373,4 @@ Dordrecht, London, New York
 	\textsc{J. Crank} (1975): \emph{Mathematics of Diffusion}, 1. Auflage, Clarendon Press Oxford
 	
 \end{thebibliography}
-
-
-
 \end{document}
