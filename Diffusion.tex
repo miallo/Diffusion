@@ -322,7 +322,7 @@ Die Steigung, welche in Abb. \ref{fig:M12} zu erkennen ist, ist $m_1=\frac{x^2}{
 \begin{align}
 \Rightarrow ~D_1&=\frac{m_1}{4.7071}\label{eq:Dc16}
 \end{align}
-Analog ergibt sich für Messung 2 mit $c=\frac{c_0}{32}$
+Analog ergibt sich für Messung 2 mit $c=c_0/32$
 \begin{align}
  \frac{15}{16}&=\erf{\frac{x}{\sqrt{4Dt}}}\notag\\
  \Rightarrow~ D_2&=\frac{m_2}{6.9395}\label{eq:Dc32}
@@ -362,7 +362,18 @@ $$\shadowbox{$D=(3.0\pm 0.1)\cdot 10^{-10}\text{m}^2/\text{s}$}$$
 Bei Messung 3 und 4 wurde in einer möglichst kurzen Zeit der Konzentrationsverlauf der beiden Küvetten gemessen.
 Für die beiden Messungen haben wir 15min und 17min benötigt.
 Dies ist relativ lange, da wir Messung 3 schon 34min nach Überschichtung begannen.
-Die Ergebnisse haben wir in Abb. \ref{fig:m3} und \ref{fig:m4} zusammen mit der theoretischen Erwartung für die jeweilige mittlere Zeit aufgetragen.
+Die Ergebnisse haben wir in Abb. \ref{fig:m3} und \ref{fig:m4} zusammen mit der theoretischen Erwartung für die jeweilige mittlere Zeit aufgetragen.\\
+Der erwartete Fehler der Messungen folgt aus 
+\begin{align*}
+	x&=1.3172^2\sqrt{4Dt}\\
+	\Rightarrow \sigma_x&=\sqrt{\sigma_D^2 \left(\frac{1.3172^2D}{\sqrt{Dt}} \right)^{2}+\sigma_t^2 \left( \frac{1.3172^2t}{\sqrt{Dt}}\right)^2}
+\end{align*}	
+Daraus ergeben sich Fehler von 
+\begin{align*}
+	\sigma_x(t=40\text{min})&=0.3\text{mm}\\
+	\sigma_x(t=120\text{min})&=0.4\text{mm}
+\end{align*}	
+Diese wurden für die Messung des $c_0/32$ Widerstands berechnet, da hier die größten Fehler zu erwarten sind.
 
 \newpage
 \section{Diskussion}
@@ -380,6 +391,7 @@ Die ist in der Realität jedoch nicht umsetzbar, zumal es während des Befüllen
 
 Trägt man die Messwerte von Messung 1 in einem Diagramm auf, so ist offensichtlich zwischen 14min und 14.5min ein Sprung in den Werten.
 Dieser ist durch einen Stoß an den Tisch zu erklären, welcher die Vermischung der Flüssigkeiten in dem Moment extrem beschleunigt hat.
+Bei Messung 2 ist deutlich zu erkennen, dass der Zusammenhang in den Messwerten nicht linear ist.
 
 \subsection{Messung 3 und 4}
 Bei der Betrachtung der Graphen fällt auf, dass (vor allem bei Messung $4$ in Abb. \ref{fig:m4}) die einzelnen Gruppen bestimmter Konzentrationen zwar relativ eng beieinander, jedoch selten auf beiden Seiten der theoretischen Werte für die durchschnittliche Zeit liegen.
