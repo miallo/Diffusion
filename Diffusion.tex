@@ -156,7 +156,7 @@ E-Mail: & m.lohmann@stud.uni-goettingen.de\\
 \begin{Large}
 \fbox{
   \begin{minipage}[t][2.5cm][t]{6cm} 
-    Testat:
+    Note:
   \end{minipage}
 }
 \end{Large}
@@ -180,7 +180,7 @@ Die Diffusion ist eine sehr wichtige Eigenschaft von Teilchen, da ohne sie zum B
 \subsection{Diffusion}
 Hat ein Stoff eine von 0K verschiedene Temperatur, so bewegen sich die Teilchen abhängig von dieser mit einer bestimmten Durchschnittsgeschwindigkeit in verschiedene Richtungen.
 Da die Teilchen gegeneinander elastisch stoßen, ändert sich in diesem Moment ihre Geschwindigkeit, sowie deren Richtung.
-Die so entstehenden zufälligen Bewegungen wurden schon 1827 von Brown entdeckt \cite[S. 8]{demtroeder}
+Die so entstehenden zufälligen Bewegungen wurden schon 1827 von Brown entdeckt \cite[S. 8]{demtroeder}.
 
 \subsection{Ficksche Gesetze}
 Die Fickschen Gesetze beschreiben die Diffusion.
@@ -192,8 +192,10 @@ $$\frac{\partial n(\vec x,t)}{\partial t}=-\nabla\cdot \vec j(\vec x,t)$$
 Setzt man die obige Gleichung nun für $\vec j$ ein, so ergibt sich das \emph{zweite Ficksche Gesetz}
 $$\shadowbox{$\frac{\partial n(\vec x,t)}{\partial t}=D~\nabla^2n(\vec x,t)$}$$
 Statt mit der Teilchenzahl $n$ zu rechnen, kann man ebenfalls mit der Teilchenkonzentration $c=\dfrac{n}{V}$ rechnen
+
+
 \subsection{Lösung der DGL}
-Die Lösung der sich aus diesen beiden Gleichungen ergebdenden Differentialgleichung wird durch die Methode der Reflektion und Superposition bestimmt (Literatur: \cite[S. 11]{crank}).
+Die Lösung der sich aus diesen beiden Gleichungen ergebenden Differentialgleichung wird durch die Methode der Reflektion und Superposition bestimmt (Literatur: \cite[S. 11]{crank}).
 Unsere gesuchte Lösung ist die für einen Zylinder, welcher für $x>0$ zu $t=0$ eine Konzentration $c=c_0$ besitzt und zur selben Zeit bei $x<0$ keine Konzentration besitzt.
 Die Grenzschicht ist also bei $x=0$.
 Wir beginnen mit der Suche nach einer Lösung für eine Stoffmenge $M$, welche sich zur Zeit $t=0$ nur am Ort $x=0$ befindet.\\
@@ -206,7 +208,7 @@ folgt ersichtlicherweise die Lösung
 c'&=\frac{A}{\sqrt{t}}\exp\left(-x^2/4Dt \right)\label{eq:c1}
 \end{align}
 mit einer Konstante A, welche an die Anfangsbedingungen angepasst wird.
-Die Gesammtmenge an diffundierendem Stoff beträgt
+Die Gesammtmenge an diffundierenden Stoff beträgt
 \begin{align*}
 M=\int\limits_{-\infty}^\infty c' \; dx
 \end{align*}
@@ -219,7 +221,7 @@ führt, was umgestellt nach $A$ und in Gleichung \eqref{eq:c1} eingesetzt heißt
 c'=\frac{M}{2\sqrt{\pi D}}\exp\left(-x^2/4Dt\right)\quad .
 \end{align*}
 Diese spezielle Lösung kann nun verwendet werden, um unsere gesuchte herzuleiten.
-Da hierbei die Hälfte des Stoffes in die positive und die andere Hälfte in die negative $x$-Richtung diffundierte, kommt zu unserer Lösung ein Faktor 2 hinzu ("Reflektion").\\
+Da hierbei die Hälfte des Stoffes in die positive und die andere Hälfte in die negative $x$-Richtung diffundiert, kommt zu unserer Lösung ein Faktor 2 hinzu ("Reflektion").\\
 Durch Superposition dieser Lösung für alle $x>0$ kommt man letztlich zu dem Ergebnis, dass
 \begin{align}
 c(x,t)=\frac{c_0}{2}\left[1-\erf{\frac{x}{\sqrt{4Dt}}}\right] \label{eq:c}
@@ -228,11 +230,11 @@ mit der Gaußschen Fehlerfunktion
 \begin{align*}
 \erf{y}=\frac{2}{\sqrt{\pi}}\int\limits_0^y\exp\left(-v^2\right)~dv
 \end{align*}
-
+ist.
 \subsection{Wheatstonsche Brückenschaltung und Photowiederstand}
 Die Wheatstonsche Brückenschaltung ist ein Bauelement, welches zur Bestimmung von Widerständen genutzt wird.
-Sie baut auf dem Prinzip der Spannungsverteiung an in Reihe geschalteten Widerständen auf.
-Hat man zwei bekannter Größe und einen regelbaren, so kann man mithilfe eines Voltmeters einen unbekannten vermessen.\\
+Sie baut auf dem Prinzip der Spannungsverteilung an in Reihe geschalteten Widerständen auf.
+Hat man zwei bekannter Größe und einen regelbaren, so kann man mithilfe eines Volt- oder Ampèremeters einen unbekannten vermessen.\\
 Dazu schaltet man je zwei Widerstände in Reihe (die beiden konstanten und den unbekannten mit dem regelbaren) und diese jeweils parallel.
 Das Voltmeter wird nun zwischen den in Reihe geschalteten angebracht.
 Dann wird der regelbare so lange verstellt, bis das Voltmeter keine Spannung mehr anzeigt.
@@ -255,16 +257,16 @@ In unserem Fall (da unsere Lichtquelle konstant geleuchtet hat) also darauf, wie
 \subsection{Aufbau}
 Der Aufbau ist in Abb. \ref{fig:aufbau} dargestellt.
 Das wichtigste Element hierbei ist eine Glasküvette, welche von einer Quecksilberdampflampe beleuchtet wird.
-Das Licht der Lampe wird vorher von einer Blende und einer Linse gebündelt auf die Küvette mitsammt der darin enthaltenen Flüssigkeit gelenkt.
+Das Licht der Lampe wird vorher von einer Blende und einer Linse gebündelt auf die Küvette mitsamt der darin enthaltenen Flüssigkeit gelenkt.
 Nachdem es sie durchquert hat, nimmt eine Fotodiode das verbleibende Licht auf.
 Der sich dadurch verändernde Wiederstand der Diode wird nun mithilfe der Wheatstonschen Brückenschaltung vermessen.
 
 \subsection{Konzentrationsverlauf}
 \subsubsection*{Messung 1}
 \label{sec:messung1}
-Für Messung 1 wird der verstellbare Wiederstand solange angepasst, bis das Voltmeter keine Spannung mehr anzeigt, wenn der Graufilter $c_0/16$ eingelegt ist.
+Für Messung 1 wird der verstellbare Wiederstand solange angepasst, bis das Ampèremeter keine Spannung mehr anzeigt, wenn der Graufilter $c_0/16$ eingelegt ist.
 Dann wird die Messküvette zu 3/4 mit Wasser gefüllt und darüber Methylenblau der Konzentration $c_0$ geschichtet.
-Nun wird die Küvette vorsichtig in das Stativ gesteckt und mit der Mikrometerschraube der Ort gesucht, an dem das Voltmeter ebenfalls keine Spannung zeigt.
+Nun wird die Küvette vorsichtig in das Stativ gesteckt und mit der Mikrometerschraube der Ort gesucht, an dem das Ampèremeter ebenfalls keinen Strom mehr anzeigt.
 Dieser Ort wird nun notiert und eine Stoppuhr gestartet.
 Im Abstand von 30s wird nun immer wieder die jeweilige Höhe bestimmt, zu der die Konzentration der Flüssigkeit gerade $c_0/16$ beträgt.
 Diese Werte werden notiert, bis die Werte von 30min aufgenommen sind.
@@ -294,10 +296,11 @@ Hier ist zu $t=0s$ eine eindeutige Grenzschicht bei $x=0$mm zu erkennen.
 Mit fortschreitender Zeit vermischen sich die Flüssigkeiten miteinander.
 Zuerst gibt es keinen Ort mehr, an dem die Konzentrationen $c_0$ oder $0$ noch vorhanden sind.
 Dieser Prozess geschieht so lange, bis (in der Theorie nach unendlich langer Zeit) eine vollkommene Gleichverteilung erfolgt ist.
-In der Abb. \ref{fig:diffkurvetheo} ist zudem zu erkennen, dass bei einer Diffusionskonstante von $4\cdot 10^{-10}$m$^2$/s auch nach zwei Tagen immernoch ein deutlicher Gradient zu erkennen ist.\\\\
+In der Abb. \ref{fig:diffkurvetheo} ist zudem zu erkennen, dass bei einer Diffusionskonstante von $4\cdot 10^{-10}$m$^2$/s auch nach zwei Tagen immer noch ein deutlicher Gradient zu erkennen ist.\\\\
 In den ersten beiden Messungen verfolgt man im Zeitverlauf die Position einer bestimmten Konzentration, was in der Abbildung den unterschiedlichen Schnittpunkten einer Gerade, welche parallel zur x-Achse verläuft entspricht.\\
 In der dritten und vierten Messung soll versucht werden, in einem möglichst kleinen Zeitraum möglichst viele verschiedene Werte von unterschiedlichen Konzentrationen zu erfassen.
-Dies würde in Abb. \ref{fig:diffkurvetheo} den unterschiedlichen Konzentrationen an unterschiedlichen Orten auf einer Kurve entsprechen.
+Dies würde in Abb. \ref{fig:diffkurvetheo} den unterschiedlichen Konzentrationen an unterschiedlichen Orten auf einer Kurve entsprechen.\\\\
+Trägt man die Ergebnisse der ersten beiden Messungen linear in der Zeit und quadratisch im Ort auf, so ist nach Gleichung \eqref{eq:c} ein linearer Zusammenhang zu erwarten, da die Konzentration konstant bleibt.
 
 \begin{figure}[!h]
  \centering
@@ -349,15 +352,19 @@ $$\shadowbox{$D=(3.0\pm 0.1)\cdot 10^{-10}\text{m}^2/\text{s}$}$$
 \begin{figure}[h!]
  \centering
  \include{profiel1}
- \caption{Messung von Versuch 3 zusammen mit dem theoretischen Wert für die durchschnittliche Zeit der Messung}
+ \caption{Messung von Versuch 3 zusammen mit dem theoretischen Wert für die durchschnittliche Zeit der Messung\label{fig:m3}}
 \end{figure}
 \begin{figure}[h!]
  \centering
  \include{profiel2}
  \caption{Messung von Versuch 4 zusammen mit dem theoretischen Wert für die durchschnittliche Zeit der Messung\label{fig:m4}}
 \end{figure}
-Für die beiden Messungen haben wir 14min und 16min benötigt.
-Dies ist \newpage
+Bei Messung 3 und 4 wurde in einer möglichst kurzen Zeit der Konzentrationsverlauf der beiden Küvetten gemessen.
+Für die beiden Messungen haben wir 15min und 17min benötigt.
+Dies ist relativ lange, da wir Messung 3 schon 34min nach Überschichtung begannen.
+Die Ergebnisse haben wir in Abb. \ref{fig:m3} und \ref{fig:m4} zusammen mit der theoretischen Erwartung für die jeweilige mittlere Zeit aufgetragen.
+
+\newpage
 \section{Diskussion}
 \label{sec:diskussion}
 \subsection{Messung 1 und 2}
@@ -371,20 +378,23 @@ Dies schien besonders bei der zweiten Messung einen Einfluss gehabt zu haben, da
 Ein weiterer möglicher Fehler war, dass wir zur Umrechnung von $x$ aus unseren gemessenen Werten davon ausgegangen sind, dass wir sofort nach der Überschichtung mit der Messung begonnen haben.
 Die ist in der Realität jedoch nicht umsetzbar, zumal es während des Befüllens schon zu einer Vermischung der beiden Flüssigkeiten kommt.\\
 
-Trägt man die Messwerte von Messung 1 in einem Diagramm auf, so ist offensicht zwischen 14min und 14.5min ein Sprung in den Werten.
+Trägt man die Messwerte von Messung 1 in einem Diagramm auf, so ist offensichtlich zwischen 14min und 14.5min ein Sprung in den Werten.
 Dieser ist durch einen Stoß an den Tisch zu erklären, welcher die Vermischung der Flüssigkeiten in dem Moment extrem beschleunigt hat.
 
 \subsection{Messung 3 und 4}
-Bei der Betrachtung der Graphen fällt auf, dass (vor allem bei Messung 4 in Abb. \ref{fig:m4}) die einzelnen Gruppen bestimmter Konzentrationen zwar relativ eng beieinander, jedoch selten auf beiden Seiten der theoretischen Werte für die durchschnittliche Zeit liegen.
+Bei der Betrachtung der Graphen fällt auf, dass (vor allem bei Messung $4$ in Abb. \ref{fig:m4}) die einzelnen Gruppen bestimmter Konzentrationen zwar relativ eng beieinander, jedoch selten auf beiden Seiten der theoretischen Werte für die durchschnittliche Zeit liegen.
 Dies deutet auf unsaubere Filter (insbesondere $c_0/2$ und $c_0/4$, welche in beiden Messungen rechts der Theorie liegen) hin, welche ihre jeweiligen Messungen verfälscht haben.
+Die wohl größte Fehlerquelle bei diesen Versuchen war unser Anspruch, möglichst genau und ohne die Probe zu stark zu bewegen zu messen.
+Dadurch haben wir extrem lange für diese Messung benötigt.
+Man sollte hierbei einen Mittelweg finden.
 
 \subsection{Allgemeine Verbesserungsvorschläge}
 Man sollte die Filter vor jeder Nutzung auf Schmutzreste überprüfen.
 Insbesondere sollte man sie nur am Rand anfassen, damit keine Fettreste zurückbleiben.\\
 Auch könnte man die Entfernung der Lampe von der Küvette etwas erhöhen, was die Erwärmung der Flüssigkeiten verzögern würde.
 Allerdings würde so auch das vom Photosensor empfangene Licht geringer werden, was wiederum Fehler hervorrufen könnte.
-Desweiteren ist darauf zu achten, das Licht im Raum möglichst stark zu dimmen, da uns auffiel, dass das Öffnen der Tür und damit ein Lichteinfall unser Voltmeter hat ausschlagen lassen.
-
+Desweiteren ist darauf zu achten, das Licht im Raum möglichst stark zu dimmen, da uns auffiel, dass das Öffnen der Tür und damit ein Lichteinfall unser Ampèremeter hat ausschlagen lassen.
+Auch ist es wichtig, nicht zu wenig Wasser in die Küvette zu füllen, da insbesondere bei Messung 4 man sonst schnell an die Grenzen des Statives kommt. 
 \section{Anhang}
 \bibliography{literatur}
 \bibliographystyle{babalpha}
